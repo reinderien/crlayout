@@ -62,7 +62,7 @@ static unsigned get_cost(const unsigned (*restrict processes)[N_AREAS]) {
 
 static void check_solution(const unsigned (*restrict processes)[N_AREAS]) {
     unsigned cost = get_cost(processes);
-	if (output)	{
+    if (output)    {
         if (cost == best_cost) {
             unsigned w = N_AREAS/2, area = 0;
             for (unsigned y = 0; y < 2; y++, area += w) {
@@ -78,7 +78,7 @@ static void check_solution(const unsigned (*restrict processes)[N_AREAS]) {
             }
             putchar('\n');
         }
-	}
+    }
     else if (best_cost > cost)
         best_cost = cost;
 }
@@ -96,7 +96,7 @@ static void swap(unsigned *restrict x, unsigned *restrict y) {
 static void permute(unsigned (*restrict a)[N_AREAS], unsigned size) {
     if (size == 1)
         check_solution(a);
-	else for (unsigned i = 0; i < size; i++) {
+    else for (unsigned i = 0; i < size; i++) {
         permute(a, size - 1);
 
         if (size & 1)
@@ -108,7 +108,7 @@ static void permute(unsigned (*restrict a)[N_AREAS], unsigned size) {
 
 
 int main() {
-	printf("Number of processes to locate: %u\n", N_AREAS);
+    printf("Number of processes to locate: %u\n", N_AREAS);
 
     unsigned processes[N_AREAS];
     for (unsigned i = 0; i < N_AREAS; i++)
@@ -121,5 +121,5 @@ int main() {
     output = true;
     permute(&processes, N_AREAS);
    
-	return 0;
+    return 0;
 }
