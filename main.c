@@ -62,7 +62,7 @@ static unsigned get_cost(const unsigned (*restrict processes)[N_AREAS]) {
 
 static void check_solution(const unsigned (*restrict processes)[N_AREAS]) {
     unsigned cost = get_cost(processes);
-    if (output)    {
+    if (output) {
         if (cost == best_cost) {
             unsigned w = N_AREAS/2, area = 0;
             for (unsigned y = 0; y < 2; y++, area += w) {
