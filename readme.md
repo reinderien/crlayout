@@ -23,7 +23,9 @@ tutor and homework help sites on the internet:
 > material that have moved from one process to another in the current building. 
 > This information is contained in the following flow matrix.
 >
->                Materials Welding Drills Lathes Grinders Benders
+> **Flow Matrix Between Production Processes**
+>
+>     From \ To  Materials Welding Drills Lathes Grinders Benders
 >     Materials          0     100     50      0        0      50 
 >     Welding           25       0      0     50        0       0 
 >     Drills            25       0      0      0       50       0 
@@ -36,12 +38,14 @@ tutor and homework help sites on the internet:
 >
 > **Distance Between Work Areas**
 >
->     20 40 20 40 60
->        20 40 20 40
->           60 40 20
->              20 40
->                 20
->
+>        1  2  3  4  5  6
+>     1    20 40 20 40 60
+>     2       20 40 20 40
+>     3          60 40 20
+>     4             20 40
+>     5                20
+>     6                  
+> 
 > What is the appropriate layout of the new building?
 
 Analysis
